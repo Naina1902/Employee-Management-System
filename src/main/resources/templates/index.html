@@ -2,9 +2,10 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Employee Form</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-<h2>Enter Employee Details</h2>
+<h2 style="text-align: center;">Enter Employee Details</h2>
 <form th:action="@{/save}" method="post" th:object="${employee}">
     Name: <input type="text" th:field="*{name}" /><br/>
     Father's Name: <input type="text" th:field="*{fname}" /><br/>
@@ -14,7 +15,8 @@
     Nationality: <input type="text" th:field="*{nationality}" /><br/>
     Mobile: <input type="text" th:field="*{mobile}" /><br/>
     Email: <input type="email" th:field="*{email}" /><br/>
-    <button type="submit">Submit</button>
+    <button type="submit" style="margin-right: 10px;">Submit</button>
+    <button type="reset" style="background-color: red; color : white;">Reset</button>
 </form>
 </body>
 </html>
